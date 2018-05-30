@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="ReferenceHaskell DocumentationLearn You a Haskell for Great Good!How to Learn HaskellWhat I Wish I Knew When Learning HaskellReal World Haskell by Bryan O’Sullivan, Don Stewart, and John Goerzenbitemy">
+<meta name="keywords" content="Haskell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Haskell note">
+<meta property="og:url" content="https://www.piio.top/2018/04/26/2018-04-26-Haskell_note/index.html">
+<meta property="og:site_name" content="2204 log">
+<meta property="og:description" content="ReferenceHaskell DocumentationLearn You a Haskell for Great Good!How to Learn HaskellWhat I Wish I Knew When Learning HaskellReal World Haskell by Bryan O’Sullivan, Don Stewart, and John Goerzenbitemy">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-24T08:11:44.653Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Haskell note">
+<meta name="twitter:description" content="ReferenceHaskell DocumentationLearn You a Haskell for Great Good!How to Learn HaskellWhat I Wish I Knew When Learning HaskellReal World Haskell by Bryan O’Sullivan, Don Stewart, and John Goerzenbitemy">
+
+
+
+
+
+
+  <link rel="canonical" href="https://www.piio.top/2018/04/26/2018-04-26-Haskell_note/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Haskell note | 2204 log</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2204 log</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.piio.top/2018/04/26/2018-04-26-Haskell_note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2204">
+      <meta itemprop="description" content="The life is not a race, but a journey to be savoured each step of the way.">
+      <meta itemprop="image" content="/images/avatar_girl_yak_sunset.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2204 log">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Haskell note
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-26 21:48:00" itemprop="dateCreated datePublished" datetime="2018-04-26T21:48:00+08:00">2018-04-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-24 16:11:44" itemprop="dateModified" datetime="2018-05-24T16:11:44+08:00">2018-05-24</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.haskell.org/documentation" target="_blank" rel="noopener">Haskell Documentation</a><br><a href="http://learnyouahaskell.com/chapters" target="_blank" rel="noopener">Learn You a Haskell for Great Good!</a><br><a href="https://acm.wustl.edu/functional/haskell.php" target="_blank" rel="noopener">How to Learn Haskell</a><br><a href="http://dev.stephendiehl.com/hask/" target="_blank" rel="noopener">What I Wish I Knew When Learning Haskell</a><br><a href="http://book.realworldhaskell.org/read/" target="_blank" rel="noopener">Real World Haskell by Bryan O’Sullivan, Don Stewart, and John Goerzen</a><br><a href="https://github.com/bitemyapp/learnhaskell" target="_blank" rel="noopener">bitemyapp/learnhaskell · GitHub</a><br><a href="http://dev.stephendiehl.com/fun/" target="_blank" rel="noopener">Write You a Haskell</a><br><a href="https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems" target="_blank" rel="noopener">H-99: Ninety-Nine Haskell Problems</a><br><a href="https://www.codewars.com/" target="_blank" rel="noopener">codewars</a> </p>
+<h1 id="Foundation"><a href="#Foundation" class="headerlink" title="Foundation"></a>Foundation</h1><h2 id="Copmiler"><a href="#Copmiler" class="headerlink" title="Copmiler"></a>Copmiler</h2><p>GHC - Glasgow Haskell Compiler </p>
+<h3 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><p><a href="https://wiki.haskell.org/GHC" target="_blank" rel="noopener">Glasgow Haskell Compiler Documentation</a><br><a href="https://imada.sdu.dk/~rolf/Edu/DM22/F06/haskell-operatorer.pdf" target="_blank" rel="noopener">Haskell operatorer</a> </p>
+<h2 id="How-to-Comment"><a href="#How-to-Comment" class="headerlink" title="How to Comment"></a>How to Comment</h2><h3 id="Single-line-Comment"><a href="#Single-line-Comment" class="headerlink" title="Single line Comment"></a>Single line Comment</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-- single line comment</span><br></pre></td></tr></table></figure>
+<h3 id="Multirow-Comment"><a href="#Multirow-Comment" class="headerlink" title="Multirow Comment"></a>Multirow Comment</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;-</span><br><span class="line">    multirow comment</span><br><span class="line">-&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><h3 id="How-to-Call-Function"><a href="#How-to-Call-Function" class="headerlink" title="How to Call Function"></a>How to Call Function</h3><h4 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div 10 2 -- function + space + parameters</span><br></pre></td></tr></table></figure>
+<h4 id="infix"><a href="#infix" class="headerlink" title="infix"></a>infix</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 `div` 2 -- surround the infux function with backticks</span><br></pre></td></tr></table></figure>
+<h3 id="List-of-Functions"><a href="#List-of-Functions" class="headerlink" title="List of Functions"></a>List of Functions</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">max a b -- return the maximum of a and b</span><br><span class="line">min a b -- return the minimun of a and b</span><br><span class="line">succ a -- return (a + 1), successor of a</span><br><span class="line">div a b -- return ((a - (a % b)) / b), takes two integers and does integral division between them</span><br></pre></td></tr></table></figure>
+<h3 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h3><ul>
+<li>Functions can’t begin with uppercase letters </li>
+<li>Functions with no parameters <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conanO&apos;Brien = &quot;It&apos;s a-me, Conan O&apos;Brien!&quot;</span><br><span class="line">-- When a function doesn&apos;t take any parameters, we usually say it&apos;s a definition (or a name). Because we can&apos;t change what names (and functions) mean once we&apos;ve defined them, conanO&apos;Brien and the string &quot;It&apos;s a-me, Conan O&apos;Brien!&quot; can be used interchangeably.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h2><h3 id="If-else"><a href="#If-else" class="headerlink" title="If else"></a>If else</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">doubleMe x = if x &gt; 100</span><br><span class="line">			then x + 1</span><br><span class="line">            else x*2 + 1</span><br><span class="line">-- equivalence</span><br><span class="line">doubleMe x = (if x &gt; 100 then x else x*2) + 1</span><br></pre></td></tr></table></figure>
+<h2 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h2><h3 id="List-homogenous-store-several-elements-of-the-same-type"><a href="#List-homogenous-store-several-elements-of-the-same-type" class="headerlink" title="List - homogenous, store several elements of the same type"></a>List - homogenous, store several elements of the same type</h3><h4 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- use the let keyword to define</span><br><span class="line">-- lists are denoted by square brackets and the values in the lists are separated by commas.</span><br><span class="line">ghci&gt; let lostNumbers = [4,8,15,16,23,42]</span><br><span class="line">ghci&gt; lostNumbers</span><br><span class="line">[4,8,15,16,23,42]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Strings are just lists of characters.<br>“hello” is just syntactic sugar for [‘h’,’e’,’l’,’l’,’o’]</li>
+<li>Lists can also contain lists.<br>They can also contain lists that contain lists that contain lists … </li>
+<li>The lists within a list can be of different lengths but they can’t be of different types.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; let b = [[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3]]  </span><br><span class="line">ghci&gt; b  </span><br><span class="line">[[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3]]  </span><br><span class="line">ghci&gt; b ++ [[1,1,1,1]]  </span><br><span class="line">[[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3],[1,1,1,1]]  </span><br><span class="line">ghci&gt; [6,6,6]:b  </span><br><span class="line">[[6,6,6],[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3]]  </span><br><span class="line">ghci&gt; b !! 2  </span><br><span class="line">[1,2,2,3,4]</span><br></pre></td></tr></table></figure>
+<h4 id="Operator"><a href="#Operator" class="headerlink" title="Operator"></a>Operator</h4><h5 id="put-two-lists-together"><a href="#put-two-lists-together" class="headerlink" title="++ - put two lists together"></a>++ - put two lists together</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; [1,2,3,4] ++ [9,10,11,12]  </span><br><span class="line">[1,2,3,4,9,10,11,12]  </span><br><span class="line">ghci&gt; &quot;hello&quot; ++ &quot; &quot; ++ &quot;world&quot;  </span><br><span class="line">&quot;hello world&quot;  </span><br><span class="line">ghci&gt; [&apos;w&apos;,&apos;o&apos;] ++ [&apos;o&apos;,&apos;t&apos;]  </span><br><span class="line">&quot;woot&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="also-called-the-cons-operator-put-something-at-the-beginning-of-a-list-instantaneously"><a href="#also-called-the-cons-operator-put-something-at-the-beginning-of-a-list-instantaneously" class="headerlink" title=": - also called the cons operator, put something at the beginning of a list instantaneously"></a>: - also called the cons operator, put something at the beginning of a list instantaneously</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; &apos;A&apos;:&quot; SMALL CAT&quot;  </span><br><span class="line">&quot;A SMALL CAT&quot;  </span><br><span class="line">ghci&gt; 5:[1,2,3,4,5]  </span><br><span class="line">[5,1,2,3,4,5]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>[1,2,3] is actually just syntactic sugar for 1:2:3:[]. [] is an empty list. If we prepend 3 to it, it becomes [3]. If we prepend 2 to that, it becomes [2,3], and so on. </li>
+<li>[], [[]] and[[],[],[]] are all different things. The first one is an empty list, the seconds one is a list that contains one empty list, the third one is a list that contains three empty lists.</li>
+</ul>
+<h5 id="get-an-element-out-of-a-list-by-index-the-indices-start-at-0"><a href="#get-an-element-out-of-a-list-by-index-the-indices-start-at-0" class="headerlink" title="!! - get an element out of a list by index, the indices start at 0"></a>!! - get an element out of a list by index, the indices start at 0</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; &quot;Steve Buscemi&quot; !! 6  </span><br><span class="line">&apos;B&apos;  </span><br><span class="line">ghci&gt; [9.4,33.2,96.2,11.2,23.25] !! 1  </span><br><span class="line">33.2</span><br></pre></td></tr></table></figure>
+<h5 id="lt-lt-gt-gt-compare-the-lists-if-their-stuff-can-be-compared"><a href="#lt-lt-gt-gt-compare-the-lists-if-their-stuff-can-be-compared" class="headerlink" title="&lt;, &lt;=, =&gt;, &gt; - compare the lists if their stuff can be compared"></a>&lt;, &lt;=, =&gt;, &gt; - compare the lists if their stuff can be compared</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; [3,2,1] &gt; [2,1,0]  </span><br><span class="line">True  </span><br><span class="line">ghci&gt; [3,2,1] &gt; [2,10,100]  </span><br><span class="line">True  </span><br><span class="line">ghci&gt; [3,4,2] &gt; [3,4]  </span><br><span class="line">True  </span><br><span class="line">ghci&gt; [3,4,2] &gt; [2,4]  </span><br><span class="line">True  </span><br><span class="line">ghci&gt; [3,4,2] == [3,4,2]  </span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+<h4 id="Basic-Functions-of-List"><a href="#Basic-Functions-of-List" class="headerlink" title="Basic Functions of List"></a>Basic Functions of List</h4><h5 id="head-takes-a-list-and-returns-its-head-The-head-of-a-list-is-basically-its-first-element"><a href="#head-takes-a-list-and-returns-its-head-The-head-of-a-list-is-basically-its-first-element" class="headerlink" title="head -  takes a list and returns its head. The head of a list is basically its first element."></a>head -  takes a list and returns its head. The head of a list is basically its first element.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; head [5,4,3,2,1]  </span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+<h5 id="tail-takes-a-list-and-returns-its-tail-In-other-words-it-chops-off-a-list’s-head"><a href="#tail-takes-a-list-and-returns-its-tail-In-other-words-it-chops-off-a-list’s-head" class="headerlink" title="tail - takes a list and returns its tail. In other words, it chops off a list’s head."></a>tail - takes a list and returns its tail. In other words, it chops off a list’s head.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; tail [5,4,3,2,1]  </span><br><span class="line">[4,3,2,1]</span><br></pre></td></tr></table></figure>
+<h5 id="last-takes-a-list-and-returns-its-last-element"><a href="#last-takes-a-list-and-returns-its-last-element" class="headerlink" title="last - takes a list and returns its last element."></a>last - takes a list and returns its last element.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; last [5,4,3,2,1]  </span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<h5 id="init-takes-a-list-and-returns-everything-except-its-last-element"><a href="#init-takes-a-list-and-returns-everything-except-its-last-element" class="headerlink" title="init - takes a list and returns everything except its last element"></a>init - takes a list and returns everything except its last element</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; init [5,4,3,2,1]  </span><br><span class="line">[5,4,3,2]</span><br></pre></td></tr></table></figure>
+<h5 id="length-takes-a-list-and-returns-its-length-obviously"><a href="#length-takes-a-list-and-returns-its-length-obviously" class="headerlink" title="length - takes a list and returns its length, obviously."></a>length - takes a list and returns its length, obviously.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; length [5,4,3,2,1]  </span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+<h5 id="null-checks-if-a-list-is-empty-If-it-is-it-returns-True-otherwise-it-returns-False-Use-this-function-instead-of-xs-if-you-have-a-list-called-xs"><a href="#null-checks-if-a-list-is-empty-If-it-is-it-returns-True-otherwise-it-returns-False-Use-this-function-instead-of-xs-if-you-have-a-list-called-xs" class="headerlink" title="null - checks if a list is empty. If it is, it returns True, otherwise it returns False. Use this function instead of xs == [] (if you have a list called xs)"></a>null - checks if a list is empty. If it is, it returns True, otherwise it returns False. Use this function instead of xs == [] (if you have a list called xs)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; null [1,2,3]  </span><br><span class="line">False  </span><br><span class="line">ghci&gt; null []  </span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+<h5 id="reverse-reverses-a-list"><a href="#reverse-reverses-a-list" class="headerlink" title="reverse - reverses a list."></a>reverse - reverses a list.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; reverse [5,4,3,2,1]</span><br><span class="line">[1,2,3,4,5]</span><br></pre></td></tr></table></figure>
+<h5 id="take-takes-number-and-a-list-It-extracts-that-many-elements-from-the-beginning-of-the-list"><a href="#take-takes-number-and-a-list-It-extracts-that-many-elements-from-the-beginning-of-the-list" class="headerlink" title="take - takes number and a list. It extracts that many elements from the beginning of the list."></a>take - takes number and a list. It extracts that many elements from the beginning of the list.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; take 3 [5,4,3,2,1]  </span><br><span class="line">[5,4,3]  </span><br><span class="line">ghci&gt; take 1 [3,9,3]  </span><br><span class="line">[3]  </span><br><span class="line">ghci&gt; take 5 [1,2]  </span><br><span class="line">[1,2]  </span><br><span class="line">ghci&gt; take 0 [6,6,6]  </span><br><span class="line">[]  </span><br><span class="line">-- If we try to take more elements than there are in the list, it just returns the list. If we try to take 0 elements, we get an empty list.</span><br></pre></td></tr></table></figure>
+<h5 id="drop-drops-the-number-of-elements-from-the-beginning-of-a-list"><a href="#drop-drops-the-number-of-elements-from-the-beginning-of-a-list" class="headerlink" title="drop - drops the number of elements from the beginning of a list"></a>drop - drops the number of elements from the beginning of a list</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; drop 3 [8,4,2,1,5,6]  </span><br><span class="line">[1,5,6]  </span><br><span class="line">ghci&gt; drop 0 [1,2,3,4]  </span><br><span class="line">[1,2,3,4]  </span><br><span class="line">ghci&gt; drop 100 [1,2,3,4]  </span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
+<h5 id="maximum-takes-a-list-of-stuff-that-can-be-put-in-some-kind-of-order-and-returns-the-biggest-element"><a href="#maximum-takes-a-list-of-stuff-that-can-be-put-in-some-kind-of-order-and-returns-the-biggest-element" class="headerlink" title="maximum - takes a list of stuff that can be put in some kind of order and returns the biggest element."></a>maximum - takes a list of stuff that can be put in some kind of order and returns the biggest element.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; maximum [1,9,2,3,4]  </span><br><span class="line">9</span><br></pre></td></tr></table></figure>
+<h5 id="minimum-returns-the-smallest"><a href="#minimum-returns-the-smallest" class="headerlink" title="minimum - returns the smallest."></a>minimum - returns the smallest.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; minimum [8,4,2,1,5,6]  </span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<h5 id="sum-takes-a-list-of-numbers-and-returns-their-sum"><a href="#sum-takes-a-list-of-numbers-and-returns-their-sum" class="headerlink" title="sum - takes a list of numbers and returns their sum."></a>sum - takes a list of numbers and returns their sum.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; sum [5,2,1,6,3,2,5,7]  </span><br><span class="line">31</span><br></pre></td></tr></table></figure>
+<h5 id="product-takes-a-list-of-numbers-and-returns-their-product"><a href="#product-takes-a-list-of-numbers-and-returns-their-product" class="headerlink" title="product - takes a list of numbers and returns their product."></a>product - takes a list of numbers and returns their product.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; product [6,2,1,2]  </span><br><span class="line">24  </span><br><span class="line">ghci&gt; product [1,2,5,6,7,9,2,0]  </span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+<h5 id="elem-takes-a-thing-and-a-list-of-things-and-tells-us-if-that-thing-is-an-element-of-the-list-It’s-usually-called-as-an-infix-function-because-it’s-easier-to-read-that-way"><a href="#elem-takes-a-thing-and-a-list-of-things-and-tells-us-if-that-thing-is-an-element-of-the-list-It’s-usually-called-as-an-infix-function-because-it’s-easier-to-read-that-way" class="headerlink" title="elem - takes a thing and a list of things and tells us if that thing is an element of the list. (It’s usually called as an infix function because it’s easier to read that way.)"></a>elem - takes a thing and a list of things and tells us if that thing is an element of the list. (It’s usually called as an infix function because it’s easier to read that way.)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ghci&gt; 4 `elem` [3,4,5,6]  </span><br><span class="line">True  </span><br><span class="line">ghci&gt; 10 `elem` [3,4,5,6]  </span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+<h5 id="Hint-1"><a href="#Hint-1" class="headerlink" title="Hint"></a>Hint</h5><ul>
+<li>When using head, tail, last and init, be careful not to use them on empty lists.</li>
+</ul>
+<h4 id="Other-functions-of-list"><a href="#Other-functions-of-list" class="headerlink" title="Other functions of list"></a>Other functions of list</h4><p><a href="http://learnyouahaskell.com/modules#data-list" target="_blank" rel="noopener">Here</a> </p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>2204</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://www.piio.top/2018/04/26/2018-04-26-Haskell_note/" title="Haskell note">https://www.piio.top/2018/04/26/2018-04-26-Haskell_note/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Haskell/" rel="tag"># Haskell</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/13/2018-04-13-weapp_resource/" rel="next" title="weapp resource">
+                <i class="fa fa-chevron-left"></i> weapp resource
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/27/2018-04-27-GHC_note/" rel="prev" title="GHC note">
+                GHC note <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar_girl_yak_sunset.png"
+                alt="2204" />
+            
+              <p class="site-author-name" itemprop="name">2204</p>
+              <p class="site-description motion-element" itemprop="description">The life is not a race, but a journey to be savoured each step of the way.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Foundation"><span class="nav-number">2.</span> <span class="nav-text">Foundation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Copmiler"><span class="nav-number">2.1.</span> <span class="nav-text">Copmiler</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Documentation"><span class="nav-number">2.1.1.</span> <span class="nav-text">Documentation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Comment"><span class="nav-number">2.2.</span> <span class="nav-text">How to Comment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Single-line-Comment"><span class="nav-number">2.2.1.</span> <span class="nav-text">Single line Comment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multirow-Comment"><span class="nav-number">2.2.2.</span> <span class="nav-text">Multirow Comment</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function"><span class="nav-number">2.3.</span> <span class="nav-text">Function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Call-Function"><span class="nav-number">2.3.1.</span> <span class="nav-text">How to Call Function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#prefix"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">prefix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#infix"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">infix</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List-of-Functions"><span class="nav-number">2.3.2.</span> <span class="nav-text">List of Functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hint"><span class="nav-number">2.3.3.</span> <span class="nav-text">Hint</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statement"><span class="nav-number">2.4.</span> <span class="nav-text">Statement</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#If-else"><span class="nav-number">2.4.1.</span> <span class="nav-text">If else</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Structure"><span class="nav-number">2.5.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#List-homogenous-store-several-elements-of-the-same-type"><span class="nav-number">2.5.1.</span> <span class="nav-text">List - homogenous, store several elements of the same type</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Definition"><span class="nav-number">2.5.1.1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Operator"><span class="nav-number">2.5.1.2.</span> <span class="nav-text">Operator</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#put-two-lists-together"><span class="nav-number">2.5.1.2.1.</span> <span class="nav-text">++ - put two lists together</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#also-called-the-cons-operator-put-something-at-the-beginning-of-a-list-instantaneously"><span class="nav-number">2.5.1.2.2.</span> <span class="nav-text">: - also called the cons operator, put something at the beginning of a list instantaneously</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#get-an-element-out-of-a-list-by-index-the-indices-start-at-0"><span class="nav-number">2.5.1.2.3.</span> <span class="nav-text">!! - get an element out of a list by index, the indices start at 0</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#lt-lt-gt-gt-compare-the-lists-if-their-stuff-can-be-compared"><span class="nav-number">2.5.1.2.4.</span> <span class="nav-text">&lt;, &lt;=, =&gt;, &gt; - compare the lists if their stuff can be compared</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Basic-Functions-of-List"><span class="nav-number">2.5.1.3.</span> <span class="nav-text">Basic Functions of List</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#head-takes-a-list-and-returns-its-head-The-head-of-a-list-is-basically-its-first-element"><span class="nav-number">2.5.1.3.1.</span> <span class="nav-text">head -  takes a list and returns its head. The head of a list is basically its first element.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tail-takes-a-list-and-returns-its-tail-In-other-words-it-chops-off-a-list’s-head"><span class="nav-number">2.5.1.3.2.</span> <span class="nav-text">tail - takes a list and returns its tail. In other words, it chops off a list’s head.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#last-takes-a-list-and-returns-its-last-element"><span class="nav-number">2.5.1.3.3.</span> <span class="nav-text">last - takes a list and returns its last element.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#init-takes-a-list-and-returns-everything-except-its-last-element"><span class="nav-number">2.5.1.3.4.</span> <span class="nav-text">init - takes a list and returns everything except its last element</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#length-takes-a-list-and-returns-its-length-obviously"><span class="nav-number">2.5.1.3.5.</span> <span class="nav-text">length - takes a list and returns its length, obviously.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#null-checks-if-a-list-is-empty-If-it-is-it-returns-True-otherwise-it-returns-False-Use-this-function-instead-of-xs-if-you-have-a-list-called-xs"><span class="nav-number">2.5.1.3.6.</span> <span class="nav-text">null - checks if a list is empty. If it is, it returns True, otherwise it returns False. Use this function instead of xs == [] (if you have a list called xs)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#reverse-reverses-a-list"><span class="nav-number">2.5.1.3.7.</span> <span class="nav-text">reverse - reverses a list.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#take-takes-number-and-a-list-It-extracts-that-many-elements-from-the-beginning-of-the-list"><span class="nav-number">2.5.1.3.8.</span> <span class="nav-text">take - takes number and a list. It extracts that many elements from the beginning of the list.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#drop-drops-the-number-of-elements-from-the-beginning-of-a-list"><span class="nav-number">2.5.1.3.9.</span> <span class="nav-text">drop - drops the number of elements from the beginning of a list</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#maximum-takes-a-list-of-stuff-that-can-be-put-in-some-kind-of-order-and-returns-the-biggest-element"><span class="nav-number">2.5.1.3.10.</span> <span class="nav-text">maximum - takes a list of stuff that can be put in some kind of order and returns the biggest element.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#minimum-returns-the-smallest"><span class="nav-number">2.5.1.3.11.</span> <span class="nav-text">minimum - returns the smallest.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sum-takes-a-list-of-numbers-and-returns-their-sum"><span class="nav-number">2.5.1.3.12.</span> <span class="nav-text">sum - takes a list of numbers and returns their sum.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#product-takes-a-list-of-numbers-and-returns-their-product"><span class="nav-number">2.5.1.3.13.</span> <span class="nav-text">product - takes a list of numbers and returns their product.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#elem-takes-a-thing-and-a-list-of-things-and-tells-us-if-that-thing-is-an-element-of-the-list-It’s-usually-called-as-an-infix-function-because-it’s-easier-to-read-that-way"><span class="nav-number">2.5.1.3.14.</span> <span class="nav-text">elem - takes a thing and a list of things and tells us if that thing is an element of the list. (It’s usually called as an infix function because it’s easier to read that way.)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hint-1"><span class="nav-number">2.5.1.3.15.</span> <span class="nav-text">Hint</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Other-functions-of-list"><span class="nav-number">2.5.1.4.</span> <span class="nav-text">Other functions of list</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-at"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2204</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+</body>
+</html>
