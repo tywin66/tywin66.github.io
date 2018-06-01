@@ -33,8 +33,8 @@
     <url>%2F2018%2F05%2F09%2F2018-05-09-Command_for_Setting%2F</url>
     <content type="text"><![CDATA[Programming LangugaePythonPackage ManagerPIPUpgrade Windows 1python -m pip install --upgrade pip LibraryPIP(Python Image Library) WindowsUse pillow to replace pip. 1pip install pillow]]></content>
       <tags>
-        <tag>programming</tag>
         <tag>note</tag>
+        <tag>programming</tag>
       </tags>
   </entry>
   <entry>
@@ -213,7 +213,7 @@
     <url>%2F2017%2F09%2F25%2F2017-09-25-Hexo_error_note%2F</url>
     <content type="text"><![CDATA[local search error search dialog box can’t pop up. There are maybe some markdown syntax errors in post files. Use the exclusive method to pick out the problematic files and edit them again.]]></content>
       <tags>
-        <tag>hexo</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
