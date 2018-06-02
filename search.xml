@@ -33,8 +33,8 @@
     <url>%2F2018%2F05%2F09%2F2018-05-09-Command_for_Setting%2F</url>
     <content type="text"><![CDATA[Programming LangugaePythonPackage ManagerPIPUpgrade Windows 1python -m pip install --upgrade pip LibraryPIP(Python Image Library) WindowsUse pillow to replace pip. 1pip install pillow]]></content>
       <tags>
-        <tag>note</tag>
         <tag>programming</tag>
+        <tag>note</tag>
       </tags>
   </entry>
   <entry>
@@ -56,7 +56,7 @@
   <entry>
     <title><![CDATA[bookmark]]></title>
     <url>%2F2018%2F05%2F04%2F2018-05-04-bookmark%2F</url>
-    <content type="text"><![CDATA[HomepageAnywhereAnything极客导航 NewsTechnologySolidot Q &amp; AChina知乎 AbroadQuorareddit]]></content>
+    <content type="text"><![CDATA[HomepageAnywhereAnything极客导航 NewsTechnologySolidot Q &amp; AChina知乎 AbroadQuorareddit Goodsnotebookcheck - notebook]]></content>
       <tags>
         <tag>URL</tag>
         <tag>bookmark</tag>
@@ -86,8 +86,8 @@
     <content type="text"><![CDATA[IntroductionGlasgow Haskell Compiler Documentation The User’s Guide Command12-- load filename.hs:l filename]]></content>
       <tags>
         <tag>compiler</tag>
-        <tag>Haskell</tag>
         <tag>GHC</tag>
+        <tag>Haskell</tag>
       </tags>
   </entry>
   <entry>
