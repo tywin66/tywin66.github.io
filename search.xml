@@ -33,8 +33,8 @@
     <url>%2F2018%2F05%2F09%2F2018-05-09-Command_for_Setting%2F</url>
     <content type="text"><![CDATA[Programming LangugaePythonPackage ManagerPIPUpgrade Windows 1python -m pip install --upgrade pip LibraryPIP(Python Image Library) WindowsUse pillow to replace pip. 1pip install pillow]]></content>
       <tags>
-        <tag>note</tag>
         <tag>programming</tag>
+        <tag>note</tag>
       </tags>
   </entry>
   <entry>
@@ -286,7 +286,7 @@
   <entry>
     <title><![CDATA[Reference_Website_for_English]]></title>
     <url>%2F2017%2F09%2F09%2F2017-09-09-Reference_Website_for_English%2F</url>
-    <content type="text"><![CDATA[English Dictionary Online Reference DictCollinsDictionary.comOxford Living DictionariesLONGMANMerriam-Webster SynonymThesaurus Otherscgdict - search a word or its rootPurdue_OWL - writing51voa - voa audio resource]]></content>
+    <content type="text"><![CDATA[English Dictionary Online ReferenceDictCollinsDictionary.comOxford Living DictionariesLONGMANMerriam-Webstercgdict - search a word or its root SynonymThesaurus OthersPurdue_OWL - writing51voa - voa audio resource]]></content>
       <tags>
         <tag>URL</tag>
         <tag>english</tag>
@@ -338,7 +338,7 @@
   <entry>
     <title><![CDATA[Computer Science Learning Website Reference]]></title>
     <url>%2F2016%2F12%2F07%2F2016-12-07-Computer_Science_Learning_Website_Reference%2F</url>
-    <content type="text"><![CDATA[ProgrammingProgramming_LanguageAssemblyWIKIBOOKS HaskellHaskell DocumentationLearn You a Haskell for Great Good!How to Learn HaskellWhat I Wish I Knew When Learning HaskellReal World Haskell by Bryan O’Sullivan, Don Stewart, and John Goerzenbitemyapp/learnhaskell · GitHubH-99: Ninety-Nine Haskell Problemscodewars CBeej’s_Guide_to_C_Programming中文版：Linux C/C++编程一站式学习 C++cplusplus Pythoncheckio Code StyleHacker’s Delight DebuggerGun DebuggerBeej’_Guide_Guide_to_GDB Network_ProgrammingFoundation_ReferenceBeej’s_Guide_to_Network_Programminginode Online LearningForeignMOOC[Massive Open Online Courses] udacity edx coursera codecademyMITOPENCOURSEWAREcodewarsWolfram|AlphaLARACASTS - The most concise screencasts for the working developer, updated dailyW3school Chinesecsie.ntnu.edu - integrates fundamental algorithms in computer science and provides tutorials which are written in Traditional Chinese (zh-Hant).crazyiter疯狂IT人immoc慕课网shiyanlou实验楼study.163网易云课堂shiyanbar实验吧极客学院RUNOOB 菜鸟教程 Online ExerciseForeigngeeksforgeeksCODEFIGHTScoderbyteCodingGame - improve your coding skills with fun exercisesLeetcode - not for noob github.com/begeekmyfriend/leetcode HackerRankCodeforces[RUS] - for the senior programmers who are good at advanced mathematics and algorithmjudgecodeSPOJUSACOTopcodercodewars ChineseLintCode github.com/awangdev/LintCode POJ(Beijing_University_Online_Judge)ZOJ(ZheJiang_University_Online_Judge) Online Compiler/Interpretercodepadideone Q&amp;AStack Overflow - Where Developers Learn, Share, &amp; Build Careers Development PlatformForeignGithub - From open source to businessGitLabBitbucket ChineseGitee码云 Reverse Engineering“Reverse_Engineering_for_Beginners”_free_bookReverse_Engineering_Challenges OSUnixBeej’s_Guide_to_Unix_Interprocess_Communication LinuxKalikali-linux-web-pentest-cookbook-zhkali-linux-cookbook-zhkali-linux-network-scanning-cookbook-zhkali-linux-wireless-pentest-zhKali_Tools]]></content>
+    <content type="text"><![CDATA[ProgrammingProgramming_LanguageAssemblyWIKIBOOKS HaskellHaskell DocumentationLearn You a Haskell for Great Good!How to Learn HaskellWhat I Wish I Knew When Learning HaskellReal World Haskell by Bryan O’Sullivan, Don Stewart, and John Goerzenbitemyapp/learnhaskell · GitHubH-99: Ninety-Nine Haskell Problemscodewars CBeej’s_Guide_to_C_Programming中文版：Linux C/C++编程一站式学习 C++cplusplus Pythoncheckio JavaScriptEloquent JavaScript - JavaScript编程精解第三版 Code StyleHacker’s Delight DebuggerGun DebuggerBeej’_Guide_Guide_to_GDB Network_ProgrammingFoundation_ReferenceBeej’s_Guide_to_Network_Programminginode Online LearningForeignMOOC[Massive Open Online Courses] udacity edx coursera codecademyMITOPENCOURSEWAREcodewarsWolfram|AlphaLARACASTS - The most concise screencasts for the working developer, updated dailyW3school Chinesecsie.ntnu.edu - integrates fundamental algorithms in computer science and provides tutorials which are written in Traditional Chinese (zh-Hant).crazyiter疯狂IT人immoc慕课网shiyanlou实验楼study.163网易云课堂shiyanbar实验吧极客学院RUNOOB 菜鸟教程 Online ExerciseForeigngeeksforgeeksCODEFIGHTScoderbyteCodingGame - improve your coding skills with fun exercisesLeetcode - not for noob github.com/begeekmyfriend/leetcode HackerRankCodeforces[RUS] - for the senior programmers who are good at advanced mathematics and algorithmjudgecodeSPOJUSACOTopcodercodewars ChineseLintCode github.com/awangdev/LintCode POJ(Beijing_University_Online_Judge)ZOJ(ZheJiang_University_Online_Judge) Online Compiler/Interpretercodepadideone Q&amp;AStack Overflow - Where Developers Learn, Share, &amp; Build Careers Development PlatformForeignGithub - From open source to businessGitLabBitbucket ChineseGitee码云 Reverse Engineering“Reverse_Engineering_for_Beginners”_free_bookReverse_Engineering_Challenges OSUnixBeej’s_Guide_to_Unix_Interprocess_Communication LinuxKalikali-linux-web-pentest-cookbook-zhkali-linux-cookbook-zhkali-linux-network-scanning-cookbook-zhkali-linux-wireless-pentest-zhKali_Tools]]></content>
       <tags>
         <tag>URL</tag>
         <tag>programming</tag>
@@ -358,8 +358,8 @@
     <url>%2F2016%2F12%2F05%2F2016-12-05-Where_is_rpm%2F</url>
     <content type="text"><![CDATA[Reference source websites Sohu.comRpmfindrpm.pbone.net]]></content>
       <tags>
-        <tag>URL</tag>
         <tag>rpm</tag>
+        <tag>URL</tag>
       </tags>
   </entry>
   <entry>
@@ -367,8 +367,8 @@
     <url>%2F2016%2F11%2F24%2F2016-11-24-Where_is_jar%2F</url>
     <content type="text"><![CDATA[mvnrepository]]></content>
       <tags>
-        <tag>jar</tag>
         <tag>URL</tag>
+        <tag>jar</tag>
       </tags>
   </entry>
   <entry>
