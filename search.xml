@@ -211,7 +211,7 @@
   <entry>
     <title><![CDATA[Hexo error note]]></title>
     <url>%2F2017%2F09%2F25%2F2017-09-25-Hexo_error_note%2F</url>
-    <content type="text"><![CDATA[local search error search dialog box can’t pop up. There are maybe some markdown syntax errors in post files. Use the exclusive method to pick out the problematic files and edit them again.]]></content>
+    <content type="text"><![CDATA[local search error search dialog box can’t pop up. There are maybe some markdown syntax errors in post files. Use the exclusive method to pick out the problematic files and edit them again. loss the style of the page delete the css file for markdown in the following directory .\source\css\main.css]]></content>
       <tags>
         <tag>Hexo</tag>
       </tags>
