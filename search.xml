@@ -33,14 +33,14 @@
     <url>%2F2018%2F05%2F09%2F2018-05-09-Command_for_Setting%2F</url>
     <content type="text"><![CDATA[Programming LangugaePythonPackage ManagerPIPUpgrade Windows 1python -m pip install --upgrade pip LibraryPIP(Python Image Library) WindowsUse pillow to replace pip. 1pip install pillow]]></content>
       <tags>
-        <tag>note</tag>
         <tag>programming</tag>
+        <tag>note</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Hexo]]></title>
     <url>%2F2018%2F05%2F07%2F2018-05-07-Hexo%2F</url>
-    <content type="text"><![CDATA[IntroductionA fast, simple &amp; powerful blog framework InitializationWindows Install nodejs Install Git Set environment variable NODEJS = .\ GIT = .\bin Install Hexo with nodejsRun the following command with a shell: 1npm install hexo-cli -g Pluginhexo plugins1234567891011npm install hexo-cli -gnpm install hexo --save# add git supportnpm install hexo-deployer-git --save# add local searchnpm install hexo-generator-search --savenpm install hexo-generator-searchdb --save# add wordcountnpm i --save hexo-wordcount# add imagenpm install hexo-asset-image --save ThemeNextSourcegithub.com/iissnan/hexo-theme-nextgithub.com/theme-next/hexo-theme-next CustomizationAdd Background Image add an image to the following directory .\themes\next\source\Images\background.png Modify the following file .\themes\next\source\css\_custom\custom.styl 1234body &#123; background:url(/images/background.png); background-attachment: fixed;&#125; ReferenceHexo-Next-主题优化(一)Hexo 主题 NexT 的一些定制和美化hexo中完美插入本地图片]]></content>
+    <content type="text"><![CDATA[IntroductionA fast, simple &amp; powerful blog framework InitializationWindows Install nodejs Install Git Set environment variable NODEJS = .\ GIT = .\bin Install Hexo with nodejsRun the following command with a shell: 1npm install hexo-cli -g Pluginhexo plugins1234567891011npm install hexo-cli -gnpm install hexo --save# add git supportnpm install hexo-deployer-git --save# add local searchnpm install hexo-generator-search --savenpm install hexo-generator-searchdb --save# add wordcountnpm install hexo-wordcount --save# add imagenpm install hexo-asset-image --save ThemeNextSourcegithub.com/iissnan/hexo-theme-nextgithub.com/theme-next/hexo-theme-next CustomizationAdd Background Image add an image to the following directory .\themes\next\source\Images\background.png Modify the following file .\themes\next\source\css\_custom\custom.styl 1234body &#123; background:url(/images/background.png); background-attachment: fixed;&#125; ReferenceHexo-Next-主题优化(一)Hexo 主题 NexT 的一些定制和美化hexo中完美插入本地图片]]></content>
       <tags>
         <tag>Hexo</tag>
       </tags>
