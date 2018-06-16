@@ -339,7 +339,7 @@
   <entry>
     <title><![CDATA[GDB Instruction]]></title>
     <url>%2F2016%2F12%2F20%2F2016-12-20-GDB_Instruction%2F</url>
-    <content type="text"><![CDATA[#list all1(gdb)l #display next line1(gdb)n #enter for redo1(gdb) #set breakpoint1(gdb)break [line_number] #enable/disable breakpoint1(gdb)enable/disable [breakpoint_number] #delete all breakpoints1(gdb)d #delete breakpoint1(gdb)d [breakpoint_number]/[breakpoint_number_range] e.g.1(gdb)d 1/1-2/1 2 #run1(gdb)r #continue1(gdb)c #check breakpoints info1(gdb)info break #check function stack - backtrack1(gdb)bt]]></content>
+    <content type="text"><![CDATA[list all1(gdb)l display next line1(gdb)n enter for redo1(gdb) set breakpoint1(gdb)break [line_number] enable/disable breakpoint1(gdb)enable/disable [breakpoint_number] delete all breakpoints1(gdb)d delete breakpoint1(gdb)d [breakpoint_number]/[breakpoint_number_range] e.g.1(gdb)d 1/1-2/1 2 run1(gdb)r continue1(gdb)c check breakpoints info1(gdb)info break check function stack - backtrack1(gdb)bt]]></content>
       <tags>
         <tag>GDB</tag>
       </tags>
