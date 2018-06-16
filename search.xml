@@ -95,8 +95,8 @@
     <content type="text"><![CDATA[IntroductionGlasgow Haskell Compiler Documentation The User’s Guide Command12-- load filename.hs:l filename]]></content>
       <tags>
         <tag>compiler</tag>
-        <tag>GHC</tag>
         <tag>Haskell</tag>
+        <tag>GHC</tag>
       </tags>
   </entry>
   <entry>
@@ -367,8 +367,8 @@
     <url>%2F2016%2F12%2F05%2F2016-12-05-Where_is_rpm%2F</url>
     <content type="text"><![CDATA[Reference source websites Sohu.comRpmfindrpm.pbone.net]]></content>
       <tags>
-        <tag>rpm</tag>
         <tag>URL</tag>
+        <tag>rpm</tag>
       </tags>
   </entry>
   <entry>
@@ -376,14 +376,14 @@
     <url>%2F2016%2F11%2F24%2F2016-11-24-Where_is_jar%2F</url>
     <content type="text"><![CDATA[mvnrepository]]></content>
       <tags>
-        <tag>URL</tag>
         <tag>jar</tag>
+        <tag>URL</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Software Depot]]></title>
     <url>%2F2016%2F06%2F25%2F2016-06-25-software_depot%2F</url>
-    <content type="text"><![CDATA[OSWindowsInstant MessagerQQWeChat PDF ReaderSumatra PDF Image ViewerJPEGViewVieas Video PlayerpotplayerMPC-HC Compressor7zip Eye ProtectorFlux GIF MakerScreenToGifLICEcap FormatorFormatFactory EfficiencyPackage ManagerChocolatey Text ProcessorNimbleText File and Folder Locatereverything HotKey CustomerAutoHotKey Quick CopyTeraCopy Snipping ToolSnipping Tool -&gt; Windows cmd : snippingtoolSnippastepicpick Download ManagerugetFree_Download_ManagerqBittorrent DeveloperIDE(Integrated Development Environment)C SharpVisual Studio Deep LearningMATLAB Code BrowserSource Insight - a powerful project-oriented programming editor, code browser, and analyzer for C/C++, C#, Java, Objective-C, and more. GUN for windowsGOW Performance Analysisvtune USB CreatorUniversalUltraISORufus LinuxLinux_Live_USB_Creator - a free and open-source software for WindowsUniversal_USB_InstallerImage_Writer_for_Windows - is used to write Ubuntu img files to SD and USB cardsUSBWriter - This tool is useful to create a bootable USB disk from a Linux Live CD image file such as Ubuntu, Fedora, Gentoo or ArchLinux EmulatorUnixcygwin LinuxAudio Playeraudacious Eye ProtectorRedShift Run Windows Software on Other OSwine - Support POSIX complicant OS, including Linux, macOS, BSDcrosscover - Support Mac, Linux, Chrome OS Cross-PlatformAudio PlayerNeteaseMusic Video PlayerVLC Video RecordingOBS Studio - Free and open source software for video recording and live streamingMythTV PDF ReaderEvince Image Viewerimgv Image EditorGIMP Image Hostfu BrowserFirefox - Extension:Greasemonkey, WeChat, NetVideoHunter, Ad-block, DownThemAll, IE-Tab, FireFTPChromeChromium - Extension:TimeDoser, Undo Close Tab, Reloader, Flash Block, Preview, IE Tab DictionaryGoldendict goldendic installation and dictionaries reference Lingoes Dict EfficiencyOfficeLibreofficeWPS NoteEvernote - Support Windows, IOS, AndroidLeanote - Support Windows, IOS, Android MailThunderbird Cloud DiskDropbox Image HostMPic USB CreatorUniversalMultiBootUSBEtcher ConverterDocumentUniversalPandoc DeveloperText EditorCodevscodevim spf13-vim SpaceVim neovim emacs MarkdownHaroopadvscode - github.com/neilsustc/vscode-markdownRemarkableTyporaFarBox IDE(Integrated Development Environment)C &amp; C++CLion JavaIDEA GoPythonPyCharm Ruby on RailsRubyMine PHPPhpStorm DataBaseDataGrip Numerical ComputationScilab DVCS(Distributed Version Control System)Git FTPFileZilla Virtual MachineOracle VM VirtualBox Container Enginedocker DisassemblerIDA Pro VPNPsiphon3XX-netshadowsocksvpnhub ReferencePIXLS.US - A selection of Free/Libre Open Source Software projects related to photography.]]></content>
+    <content type="text"><![CDATA[OSWindowsInstant MessagerQQWeChat PDF ReaderSumatra PDF Image ViewerJPEGViewVieas Video PlayerpotplayerMPC-HC Compressor7zip Eye ProtectorFlux GIF MakerScreenToGifLICEcap FormatorFormatFactory EfficiencyPackage ManagerChocolatey Text ProcessorNimbleText File and Folder Locatereverything HotKey CustomerAutoHotKey Quick CopyTeraCopy Snipping ToolSnipping Tool -&gt; Windows cmd : snippingtoolSnippastepicpick Download ManagerugetFree_Download_ManagerqBittorrent DeveloperIDE(Integrated Development Environment)C SharpVisual Studio Deep LearningMATLAB Code BrowserSource Insight - a powerful project-oriented programming editor, code browser, and analyzer for C/C++, C#, Java, Objective-C, and more. GUN for windowsGOW Performance Analysisvtune USB CreatorUniversalUltraISORufus LinuxLinux_Live_USB_Creator - a free and open-source software for WindowsUniversal_USB_InstallerImage_Writer_for_Windows - is used to write Ubuntu img files to SD and USB cardsUSBWriter - This tool is useful to create a bootable USB disk from a Linux Live CD image file such as Ubuntu, Fedora, Gentoo or ArchLinux EmulatorUnixcygwin LinuxAudio Playeraudacious Eye ProtectorRedShift Run Windows Software on Other OSwine - Support POSIX complicant OS, including Linux, macOS, BSDcrosscover - Support Mac, Linux, Chrome OS Cross-PlatformAudio PlayerNeteaseMusic Video PlayerVLC Video RecordingOBS Studio - Free and open source software for video recording and live streamingMythTV PDF ReaderEvince Image Viewerimgv Image EditorGIMP Image Hostfu BrowserFirefox - Extension:Greasemonkey, WeChat, NetVideoHunter, Ad-block, DownThemAll, IE-Tab, FireFTPChromeChromium - Extension:TimeDoser, Undo Close Tab, Reloader, Flash Block, Preview, IE Tab DictionaryGoldendict goldendic installation and dictionaries reference Lingoes Dict EfficiencyOfficeLibreofficeWPS NoteEvernote - Support Windows, IOS, AndroidLeanote - Support Windows, IOS, Android Work &amp; RestWorkrave - frequently alerts you to take micro-pauses, rest breaks and restricts you to your daily limit; runs on GNU/Linux and Microsoft Windows MailThunderbird Cloud DiskDropbox Image HostMPic USB CreatorUniversalMultiBootUSBEtcher ConverterDocumentUniversalPandoc DeveloperText EditorCodevscodevim spf13-vim SpaceVim neovim emacs MarkdownHaroopadvscode - github.com/neilsustc/vscode-markdownRemarkableTyporaFarBox IDE(Integrated Development Environment)C &amp; C++CLion JavaIDEA GoPythonPyCharm Ruby on RailsRubyMine PHPPhpStorm DataBaseDataGrip Numerical ComputationScilab DVCS(Distributed Version Control System)Git FTPFileZilla Virtual MachineOracle VM VirtualBox Container Enginedocker DisassemblerIDA Pro VPNPsiphon3XX-netshadowsocksvpnhub ReferencePIXLS.US - A selection of Free/Libre Open Source Software projects related to photography.]]></content>
       <tags>
         <tag>note</tag>
         <tag>software</tag>
