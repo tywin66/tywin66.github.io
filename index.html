@@ -459,7 +459,9 @@
 
 IntroductionThe Wisdom of Insecurity : A Message for an Age of Anxiety - Alan W. Watts - 2011 
 ConnectionAlanWatts.org 
-ExcerptChapter 1 The Age of AnxietyBy the same law of reversed effort, we discover the “infinite” and the “absolute,” not by
+ExcerptChapter 1 The Age of AnxietyBy the same law of reversed effort, we discover the “infinite” and the “absolute,” not by straining to escape from the finite and relative world, but by the most complete acceptance of its limitations. Paradox as it may seem, we likewise find life meaningful only when we have seen that it is without purpose, and know the “mystery of the universe” only when we are convinced that we know nothing about it at all. 
+
+accpet the limitation o
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -773,7 +775,13 @@ IntroductionThe_C_Programming_Language-Brian Kernighan &amp; Dennis Ritchie-2nd 
 ExcerptChapter 11.8 Arguments - Call by ValueThe called function is given 
 
 the values of its arguments 
-in temporary variables -  leads to more compact pr
+in temporary variables -  leads to more compact programswith fewer extraneous variables 
+the called function can’t modify a variable in a calling routine. 
+
+
+the address of the variable to be set (technically a pointer to the variable) 
+the called function must declare the parameter to be a pointer and access the variable indirectly through it. 
+the called functino can modify a variable in a calli
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -936,7 +944,19 @@ in temporary variables -  leads to more compact pr
 IntroductionA HISTORY OF WESTERN THOUGHT - Gunnar Skirbekk &amp; Nils Gilje （西方哲学史-从古希腊到当下-希尔贝克-修订版-上海译文出版社 20160301) 
 SummaryChapter 1 前苏格拉底哲学，附带浏览古代印度思想和古代中国思想Section 1 古希腊城邦-共同体中的人
 理解答案，需把握特定哲学家的问题和用来支持其答案的论据。 
-一般来说，哲学答案的重要性不在于“运用”，而在于有助于我们更
+一般来说，哲学答案的重要性不在于“运用”，而在于有助于我们更好地理解事物。 
+不同的答案具有不同的蕴意，对哲学问题可以有不同的实际影响。所以我们有必要意识到一种哲学答案会具有什么样的蕴意。 
+我们必需意识的东西有四点：1.问题；2.论据；3.答案（最不重要，其意义基于特定因素）；4.蕴意。 
+米利都派的自然哲学家（第一代，追问贯穿所有变化中的不变的元素是什么） 
+
+泰勒斯(Thales)：（据说）万物是水。（所有变化中存在一种不变的元素。） 
+阿纳克西曼德(Anaximander)：始基，不定者，它是空间上和时间上都没有边界的。 
+阿纳克西米尼(Anaximenes)：（水从自己的未分化的状态转变为它的种种分化的状态，是如何发生的）气是始基。 
+
+
+第二代（提出质问：变化是否存在) 
+
+赫拉克利特(Heraclitus)：万物处于不断的变化或流动中。
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1256,7 +1276,11 @@ NODEJS = .\
 GIT = .\bin 
 
 
-Install Hexo with nodejsRun the following command with a shell: 1npm install hexo-cli -
+Install Hexo with nodejsRun the following command with a shell: 1npm install hexo-cli -g
+
+
+Pluginhexo plugins1234567891011npm install hexo-cli -gnpm install hexo --save# add git supportnpm install hexo-deployer-git --save# add local searchnpm install hexo-generator-search --savenpm install hexo-generator-searchdb --save# add wordcountnpm install hexo-wordcount --save# add imagenpm install hexo-asset-image --save
+ThemeNextSourcegithub
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1407,7 +1431,10 @@ Install chocolatey
 
 ensure using an administrative shell 
 Option 1. Install with cmd.exeRun the following command: 
-1@&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -InputFormat None -ExecutionPolicy Bypas
+1@&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &quot;iex ((New-Object System.Net.WebClient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot; &amp;&amp; SET &quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;
+
+Option 2. Install with PowerShell.exeRun the following command: 
+1Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClie
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1736,7 +1763,12 @@ Summary观念·此处素质公民素养的培养首先需要制度的变革打�
 民意与伪民意鉴定民意的真伪，标准在于民众在形成意见时讨论是否自由、观念可否多元、信息是否充分。 
 给理想一点时间相信时间，就意味着相信除了千千万万人日积月累的努力，历史没有进步的捷径。 
 不知道与宁可不知道“理性无知”理论：当“无知”合乎人们的“理性”时，人们可能会努力保持这种无知，刻意逃避可能会干扰这种“无知”的信息。 
-恶之平庸犯
+恶之平庸犯下恶行者，因看不到与所犯恶行相关的一系列事件的全貌，似乎都有理由觉得自己无辜。所谓人性觉醒，就是从自己所隐身的角色中抽身出来，恢复成独立、完整并需要为自己一举一动负责的人。 
+贵族范儿一个道理的意义不在于它能创造多少美学上的新鲜感或者提供多少智力上的游戏感，而在于它在多大程度上回应现实中的真问题。（道理的意义在于回应现实中的真问题。） 
+迷人的愤怒愤怒是通向正义感进而达成“存在感”的捷径。对很多掌权者而言，民众的愤怒是最好的政治兴奋剂。施密特：政治的要义是“分清敌我”。
+肩负自由的疲惫民众对政府的不信任促进政府被改造得更加值得信任。民众对政府一定的信任是政府健康的表现。 
+告别印象主义不要印象主义。(逻辑和论据不可能说清所有社会问题，但有存在意义。) 
+今天您施密特了吗不要施密特中国粉丝团文
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1897,7 +1929,7 @@ Summary观念·此处素质公民素养的培养首先需要制度的变革打�
               
 
 FoundationNovelSophie’s World - Jostein Gaarder (苏菲的世界-[挪威]乔德坦·贾德) 
-IntroductionA Invitation of Philosophy - Fernando Savater (哲学的邀请-[西]费尔南多·萨瓦特尔)The Big Questions - A short introduction to philosophy - Robert C. Solomon (大问题·简明哲学导论-[美]罗伯特·所罗门)
+IntroductionA Invitation of Philosophy - Fernando Savater (哲学的邀请-[西]费尔南多·萨瓦特尔)The Big Questions - A short introduction to philosophy - Robert C. Solomon (大问题·简明哲学导论-[美]罗伯特·所罗门)The_Joy_of_Philosophy-Thinking_Thin_versus_the_Passionate_Life-Robert_Solomon-1999-ENU (哲学的快乐：干瘪的思考vs.激情的生活)What Does It All Mean? - A Very Short Introduction to Philosophy - Thomas Nagel (你的第一本哲学书-[美]托马斯·内格尔)A Beginner’s guide to ideas: religion and philosophy, past and present(智慧之门：宗教和哲学的过去与现在) - 英国高中教材Philosophy for Everyone-Matthew_Chrisman,_Du
           ...
           <!--noindex-->
           <div class="post-button text-center">
