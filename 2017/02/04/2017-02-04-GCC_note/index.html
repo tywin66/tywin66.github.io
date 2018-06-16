@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="GCC_Compile_Program_Flow   Source_File[.c] -&amp;gt; Preprocess(Preprocessor)[.i] -&amp;gt; Compile(compiler) -&amp;gt; Assemble(assembler) -&amp;gt; link(connector) -&amp;gt; Executable_File(*.o) 1234567891011121314151">
+  <meta name="description" content="GCC_Compile_Program_Flow   Source_File[.c] -&amp;gt; Preprocess(Preprocessor)[.i] -&amp;gt; Compile(compiler) -&amp;gt; Assemble(assembler) -&amp;gt; link(connector) -&amp;gt; Executable_File(*.o)">
 <meta name="keywords" content="compiler,GCC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GCC note">
 <meta property="og:url" content="https://www.piio.top/2017/02/04/2017-02-04-GCC_note/index.html">
 <meta property="og:site_name" content="2204 log">
-<meta property="og:description" content="GCC_Compile_Program_Flow   Source_File[.c] -&amp;gt; Preprocess(Preprocessor)[.i] -&amp;gt; Compile(compiler) -&amp;gt; Assemble(assembler) -&amp;gt; link(connector) -&amp;gt; Executable_File(*.o) 1234567891011121314151">
+<meta property="og:description" content="GCC_Compile_Program_Flow   Source_File[.c] -&amp;gt; Preprocess(Preprocessor)[.i] -&amp;gt; Compile(compiler) -&amp;gt; Assemble(assembler) -&amp;gt; link(connector) -&amp;gt; Executable_File(*.o)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-27T05:52:29.656Z">
+<meta property="og:updated_time" content="2018-06-16T12:54:48.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GCC note">
-<meta name="twitter:description" content="GCC_Compile_Program_Flow   Source_File[.c] -&amp;gt; Preprocess(Preprocessor)[.i] -&amp;gt; Compile(compiler) -&amp;gt; Assemble(assembler) -&amp;gt; link(connector) -&amp;gt; Executable_File(*.o) 1234567891011121314151">
+<meta name="twitter:description" content="GCC_Compile_Program_Flow   Source_File[.c] -&amp;gt; Preprocess(Preprocessor)[.i] -&amp;gt; Compile(compiler) -&amp;gt; Assemble(assembler) -&amp;gt; link(connector) -&amp;gt; Executable_File(*.o)">
 
 
 
@@ -417,7 +417,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-04-27 13:52:29" itemprop="dateModified" datetime="2018-04-27T13:52:29+08:00">2018-04-27</time>
+                <time title="Modified: 2018-06-16 20:54:48" itemprop="dateModified" datetime="2018-06-16T20:54:48+08:00">2018-06-16</time>
               
             
           </span>
@@ -453,8 +453,7 @@
         <ul>
 <li>GCC_Compile_Program_Flow </li>
 </ul>
-<p>Source_File[<em>.c] -&gt; Preprocess(Preprocessor)[</em>.i] -&gt; Compile(compiler) -&gt; Assemble(assembler) -&gt; link(connector) -&gt; Executable_File(*.o)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ gcc *.c -o *</span><br><span class="line"># first step</span><br><span class="line"># stop after preprocessing</span><br><span class="line">$ gcc -E *.c -o *.i</span><br><span class="line"></span><br><span class="line"># second step</span><br><span class="line"># compile skip preprocessing</span><br><span class="line"># check for syntax errors</span><br><span class="line"># output an binary file</span><br><span class="line">$ gcc -c *.i -o *.o</span><br><span class="line"></span><br><span class="line"># disassemble</span><br><span class="line">$ objdump -dS *.o</span><br><span class="line"></span><br><span class="line"># assembly</span><br><span class="line"># output *.s</span><br><span class="line">$ gcc -S *.c</span><br><span class="line"></span><br><span class="line"># third step</span><br><span class="line"># link the object file as an executable file</span><br></pre></td></tr></table></figure>
+<p>Source_File[<em>.c] -&gt; Preprocess(Preprocessor)[</em>.i] -&gt; Compile(compiler) -&gt; Assemble(assembler) -&gt; link(connector) -&gt; Executable_File(*.o)<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ gcc *.c -o *</span><br><span class="line"># first step</span><br><span class="line"># stop after preprocessing</span><br><span class="line">$ gcc -E *.c -o *.i</span><br><span class="line"></span><br><span class="line"># second step</span><br><span class="line"># compile skip preprocessing</span><br><span class="line"># check for syntax errors</span><br><span class="line"># output an binary file</span><br><span class="line">$ gcc -c *.i -o *.o</span><br><span class="line"></span><br><span class="line"># disassemble</span><br><span class="line">$ objdump -dS *.o</span><br><span class="line"></span><br><span class="line"># assembly</span><br><span class="line"># output *.s</span><br><span class="line">$ gcc -S *.c</span><br><span class="line"></span><br><span class="line"># third step</span><br><span class="line"># link the object file as an executable file</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>Some  extension names of the sources files which are supported by GCC  </li>
 </ul>
