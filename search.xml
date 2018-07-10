@@ -138,8 +138,8 @@
     <content type="text"><![CDATA[IntroductionGlasgow Haskell Compiler Documentation The User’s Guide Command12-- load filename.hs:l filename]]></content>
       <tags>
         <tag>compiler</tag>
-        <tag>GHC</tag>
         <tag>Haskell</tag>
+        <tag>GHC</tag>
       </tags>
   </entry>
   <entry>
